@@ -9,53 +9,60 @@ export function PricingSection() {
 
   const pricingPlans = [
     {
-      name: "Free",
-      monthlyPrice: "$0",
-      annualPrice: "$0",
-      description: "Perfect for individuals starting their journey.",
+      name: "Lite Plan",
+      monthlyPrice: "₹1,50,000/-",
+      annualPrice: "₹1,50,000/-",
+      description: "/year",
       features: [
-        "Real-time code suggestions",
-        "Basic integration logos",
-        "Single MCP server connection",
-        "Up to 2 AI coding agents",
-        "Vercel deployments with Pointer branding",
+        "Basic Analytics Dashboard",
+        "Data Visualization Tools",
+        "Real-time Data Processing",
+        "AI-Powered Insights",
+        "Interactive Reports",
+        "Email Support",
+        "Data Export Options",
+        "Basic Security Features",
       ],
       buttonText: "Get Started",
       buttonClass:
         "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
     },
     {
-      name: "Pro",
-      monthlyPrice: "$20",
-      annualPrice: "$16",
-      description: "Ideal for professionals.",
+      name: "Pro Plan",
+      monthlyPrice: "₹2,00,000/-",
+      annualPrice: "₹2,00,000/-",
+      description: "/year",
       features: [
-        "Enhanced real-time previews",
-        "Unlimited integrations with custom logos",
-        "Multiple MCP server connections",
-        "Up to 10 concurrent AI coding agents",
-        "Collaborative coding with team chat",
-        "Advanced version control integrations",
-        "Priority email and chat support",
+        "All Lite Plan Features",
+        "Natural Language Data Extraction",
+        "AI Assistant",
+        "Advanced Analytics",
+        "Custom Dashboards",
+        "Priority Email Support",
+        "Data Integration with 200+ Sources",
+        "Enhanced Security Features",
       ],
-      buttonText: "Join now",
+      buttonText: "Get Started",
       buttonClass:
         "bg-primary-foreground shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-primary text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-primary-foreground/90",
       popular: true,
     },
     {
-      name: "Ultra",
-      monthlyPrice: "$200",
-      annualPrice: "$160",
-      description: "Tailored solutions for teams.",
+      name: "Enterprise Plan",
+      monthlyPrice: "Contact Us",
+      annualPrice: "Contact Us",
+      description: "for Pricing",
       features: [
-        "Dedicated account support",
-        "Unlimited MCP server clusters",
-        "Unlimited AI coding agents",
-        "Enterprise-grade security and compliance",
-        "Priority deployments and SLA guarantees",
+        "All Pro Plan Features",
+        "AI Agent Kristina Included",
+        "All AI Features Unlocked",
+        "24/7 Expert Support",
+        "Custom AI Solutions",
+        "Dedicated Account Manager",
+        "Onboarding and Training",
+        "Advanced Security Compliance",
       ],
-      buttonText: "Talk to Sales",
+      buttonText: "Contact Us",
       buttonClass:
         "bg-secondary shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-secondary-foreground text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-secondary/90",
     },
@@ -66,11 +73,11 @@ export function PricingSection() {
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
         <div className="flex flex-col justify-start items-center gap-4">
           <h2 className="text-center text-foreground text-4xl md:text-5xl font-semibold leading-tight md:leading-[40px]">
-            Pricing built for every developer
+            Pricing built for every business
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-tight">
-            Choose a plan that fits your coding workflow, from individuals starting out to <br /> growing professionals
-            and large organizations.
+            Choose a plan that fits your data analytics needs, from startups to <br /> growing businesses
+            and large enterprises.
           </p>
         </div>
         <div className="pt-4">
@@ -166,7 +173,7 @@ export function PricingSection() {
               >
                 <div className="px-1.5 flex justify-center items-center gap-2">
                   <span
-                    className={`text-center text-sm font-medium leading-tight ${plan.name === "Free" ? "text-gray-800" : plan.name === "Pro" ? "text-primary" : "text-zinc-950"}`}
+                    className={`text-center text-sm font-medium leading-tight ${plan.name === "Lite Plan" ? "text-gray-800" : plan.name === "Pro Plan" ? "text-primary" : "text-zinc-950"}`}
                   >
                     {plan.buttonText}
                   </span>
@@ -177,7 +184,7 @@ export function PricingSection() {
               <div
                 className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-muted-foreground"}`}
               >
-                {plan.name === "Free" ? "Get Started today:" : "Everything in Free +"}
+{plan.name === "Lite Plan" ? "Get Started today:" : plan.name === "Pro Plan" ? "Everything in Lite +" : "Everything in Pro +"}
               </div>
               <div className="self-stretch flex flex-col justify-start items-start gap-3">
                 {plan.features.map((feature) => (
