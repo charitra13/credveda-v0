@@ -4,36 +4,36 @@ import type React from "react"
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 
-const faqData = [
+const faqs = [
   {
-    question: "What is Pointer and who is it for?",
+    question: "What kind of databases can CredVeda connect to?",
     answer:
-      "Pointer is an AI-powered development platform designed for developers, teams, and organizations who want toaccelerate their coding workflow. It's perfect for both individual developers looking to enhance their productivity and teams seeking seamless collaboration tools.",
+      "CredVeda is designed to seamlessly connect to most SQL-based databases that have a stable Python DB-API driver and a SQLAlchemy dialect. This includes popular databases like PostgreSQL, MySQL, and cloud-based data warehouses like AWS Redshift. We require dedicated, read-only access to ensure your source data integrity is always maintained.",
   },
   {
-    question: "How does Pointer's AI code review work?",
+    question: "How does CredVeda ensure data security?",
     answer:
-      "Our AI analyzes your code in real-time, providing intelligent suggestions for improvements, catching potential bugs, and ensuring best practices. It learns from your coding patterns and adapts to your team's standards, making code reviews faster and more consistent.",
+      "Security is our top priority. The platform is a desktop application to ensure a secure environment. We integrate with enterprise security managers like Instasafe, requiring users to connect through your company's secure network. All data access is strictly controlled through multi-layered Role-Based Access Control (RBAC) and Row-Level Security (RLS), ensuring users only see the data relevant to their specific role and jurisdiction.",
   },
   {
-    question: "Can I integrate Pointer with my existing tools?",
+    question: "How is user access managed within the platform?",
     answer:
-      "Yes! Pointer offers one-click integrations with popular development tools including GitHub, GitLab, VS Code, Slack, and many more. Our MCP connectivity allows you to easily manage and configure server access across your entire development stack.",
+      "User access is tied directly to your organization's employee directory. An employee logs in with their company ID and password. Our system then verifies their designation (e.g., Branch Manager, Sales Officer) and automatically applies the correct data access permissions. A Sales Officer, for example, will not be able to see data from the credit or collection departments.",
   },
   {
-    question: "What's included in the free plan?",
+    question: "How does the platform handle large datasets without slowing down our servers?",
     answer:
-      "The free plan includes real-time code suggestions, basic integrations, single MCP server connection, up to 2 AI coding agents, and Vercel deployments with Pointer branding. It's perfect for individual developers getting started.",
+      "CredVeda is built on a modern data stack using PySpark for efficient, large-scale data processing. Our system is designed for incremental data refreshes. Every 30 minutes, it queries only for new or updated data, rather than re-fetching the entire dataset. This minimizes the load on your database servers while keeping the dashboards up-to-date.",
   },
   {
-    question: "How do parallel coding agents work?",
+    question: "Can we customize the dashboards and reports?",
     answer:
-      "Our parallel coding agents can work on different parts of your codebase simultaneously, solving complex problems faster than traditional single-threaded approaches. You can launch multiple agents to handle different tasks like bug fixes, feature development, and code optimization concurrently.",
+      "Yes. Customization is a core feature. Users can arrange graphs, charts, and tables on their dashboards to suit their specific needs. You can create and save different views and generate reports on-demand directly from the application, streamlining the entire analytics workflow.",
   },
   {
-    question: "Is my code secure with Pointer?",
+    question: "What is the deployment process like?",
     answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, secure data transmission, and compliance with industry standards. Your code never leaves your secure environment without your explicit permission, and we offer on-premises deployment options for enterprise customers.",
+      "We aim for a 'plug-and-play' deployment. Provided your organization meets the prerequisites—such as having a compatible SQL database, a structured employee directory, and defined data governance—our team can get you set up quickly. We work with your IT team to establish secure database connectivity and integrate with your identity management systems.",
   },
 ]
 
@@ -99,12 +99,12 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-[18.20px] break-words">
-            Everything you need to know about Pointer and how it can transform your development workflow
+            Everything you need to know about CredVeda and how it can transform your NBFC analytics workflow
           </p>
         </div>
       </div>
       <div className="w-full max-w-[600px] pt-0.5 pb-10 flex flex-col justify-start items-start gap-4 relative z-10">
-        {faqData.map((faq, index) => (
+        {faqs.map((faq, index) => (
           <FAQItem key={index} {...faq} isOpen={openItems.has(index)} onToggle={() => toggleItem(index)} />
         ))}
       </div>
