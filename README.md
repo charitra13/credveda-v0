@@ -2,7 +2,6 @@
 
 *Data Analytics and AI Solutions Platform*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/charitrajainofficial-gmailcoms-projects/v0-pointer-ai-landing-page)
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/v57yiJxeOA7)
 
 ## Overview
@@ -11,10 +10,30 @@ CredVeda is a comprehensive data analytics and AI solutions platform designed to
 
 ## Version History
 
-### Version 1.4 - Deployment Fix
+### Version 1.6 - Pricing Model Update
 - **Date**: Current
 - **Changes**: 
-  - **BUG FIX**: Resolved React 19 compatibility issue causing Vercel deployment failures
+  - **PRICING UPDATE**: Changed all pricing plans from monthly to yearly billing
+  - Removed monthly/annual toggle functionality from pricing section
+  - Updated pricing display to show "/year" instead of "/month"
+  - Simplified pricing data structure to use single price field
+  - Enhanced user experience by removing complex pricing toggles
+
+### Version 1.5 - Vercel References Removal
+- **Date**: Current
+- **Changes**: 
+  - **CONTENT UPDATE**: Removed all Vercel redirect navigation logic and references
+  - Removed Vercel badge and deployment URLs from README
+  - Updated deployment button from "Deploy on Vercel" to generic "Deploy"
+  - Removed Vercel-specific console log references in deployment component
+  - Updated testimonial content to remove Vercel deployment references
+  - Changed CEO testimonial company from "Vercel" to "DevCorp"
+  - Replaced Vercel logo with Docker logo in integrations illustration
+
+### Version 1.4 - Deployment Fix
+- **Date**: Previous
+- **Changes**: 
+  - **BUG FIX**: Resolved React 19 compatibility issue causing deployment failures
   - Removed unused `vaul` package dependency that didn't support React 19
   - Deleted and regenerated package-lock.json to eliminate dependency conflicts
   - Fixed npm install errors during deployment pipeline
@@ -59,12 +78,6 @@ CredVeda is a comprehensive data analytics and AI solutions platform designed to
   - Initial landing page with basic pricing structure
   - Original developer-focused content and pricing
 
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/charitrajainofficial-gmailcoms-projects/v0-pointer-ai-landing-page](https://vercel.com/charitrajainofficial-gmailcoms-projects/v0-pointer-ai-landing-page)**
-
 ## Build your app
 
 Continue building your app on:
@@ -76,4 +89,4 @@ Continue building your app on:
 1. Create and modify your project using [v0.app](https://v0.app)
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+4. Deploy your project using your preferred hosting platform

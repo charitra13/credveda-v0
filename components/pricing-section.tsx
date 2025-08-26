@@ -1,17 +1,14 @@
 "use client"
 
-import { useState } from "react"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function PricingSection() {
-  const [isAnnual, setIsAnnual] = useState(true)
 
   const pricingPlans = [
     {
       name: "Lite Plan",
-      monthlyPrice: "₹1,50,000/-",
-      annualPrice: "₹1,50,000/-",
+      price: "₹1,50,000/-",
       description: "/year",
       features: [
         "Basic Analytics Dashboard",
@@ -29,8 +26,7 @@ export function PricingSection() {
     },
     {
       name: "Pro Plan",
-      monthlyPrice: "₹2,00,000/-",
-      annualPrice: "₹2,00,000/-",
+      price: "₹2,00,000/-",
       description: "/year",
       features: [
         "All Lite Plan Features",
@@ -49,8 +45,7 @@ export function PricingSection() {
     },
     {
       name: "Enterprise Plan",
-      monthlyPrice: "Contact Us",
-      annualPrice: "Contact Us",
+      price: "Contact Us",
       description: "for Pricing",
       features: [
         "All Pro Plan Features",
@@ -80,30 +75,6 @@ export function PricingSection() {
             and large enterprises.
           </p>
         </div>
-        <div className="pt-4">
-          <div className="p-0.5 bg-muted rounded-lg outline outline-1 outline-[#0307120a] outline-offset-[-1px] flex justify-start items-center gap-1 md:mt-0">
-            <button
-              onClick={() => setIsAnnual(true)}
-              className={`pl-2 pr-1 py-1 flex justify-start items-start gap-2 rounded-md ${isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""}`}
-            >
-              <span
-                className={`text-center text-sm font-medium leading-tight ${isAnnual ? "text-accent-foreground" : "text-zinc-400"}`}
-              >
-                Annually
-              </span>
-            </button>
-            <button
-              onClick={() => setIsAnnual(false)}
-              className={`px-2 py-1 flex justify-start items-start rounded-md ${!isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""}`}
-            >
-              <span
-                className={`text-center text-sm font-medium leading-tight ${!isAnnual ? "text-accent-foreground" : "text-zinc-400"}`}
-              >
-                Monthly
-              </span>
-            </button>
-          </div>
-        </div>
       </div>
       <div className="self-stretch px-5 flex flex-col md:flex-row justify-start items-start gap-4 md:gap-6 mt-6 max-w-[1100px] mx-auto">
         {pricingPlans.map((plan) => (
@@ -129,36 +100,14 @@ export function PricingSection() {
                 <div className="self-stretch flex flex-col justify-start items-start gap-1">
                   <div className="flex justify-start items-center gap-1.5">
                     <div
-                      className={`relative h-10 flex items-center text-3xl font-medium leading-10 ${plan.popular ? "text-primary-foreground" : "text-zinc-50"}`}
+                      className={`h-10 flex items-center text-3xl font-medium leading-10 ${plan.popular ? "text-primary-foreground" : "text-zinc-50"}`}
                     >
-                      <span className="invisible">{isAnnual ? plan.annualPrice : plan.monthlyPrice}</span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: isAnnual ? 1 : 0,
-                          transform: `scale(${isAnnual ? 1 : 0.8})`,
-                          filter: `blur(${isAnnual ? 0 : 4}px)`,
-                        }}
-                        aria-hidden={!isAnnual}
-                      >
-                        {plan.annualPrice}
-                      </span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: !isAnnual ? 1 : 0,
-                          transform: `scale(${!isAnnual ? 1 : 0.8})`,
-                          filter: `blur(${!isAnnual ? 0 : 4}px)`,
-                        }}
-                        aria-hidden={isAnnual}
-                      >
-                        {plan.monthlyPrice}
-                      </span>
+                      {plan.price}
                     </div>
                     <div
                       className={`text-center text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"}`}
                     >
-                      /month
+                      /year
                     </div>
                   </div>
                   <div
