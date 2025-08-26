@@ -11,6 +11,15 @@ CredVeda is a comprehensive data analytics and AI solutions platform designed to
 
 ## Version History
 
+### Version 1.4 - Deployment Fix
+- **Date**: Current
+- **Changes**: 
+  - **BUG FIX**: Resolved React 19 compatibility issue causing Vercel deployment failures
+  - Removed unused `vaul` package dependency that didn't support React 19
+  - Deleted and regenerated package-lock.json to eliminate dependency conflicts
+  - Fixed npm install errors during deployment pipeline
+  - Ensured all dependencies are compatible with React 19
+
 ### Version 1.3 - FAQ Section Update
 - **Date**: Current
 - **Changes**: 
