@@ -1,9 +1,7 @@
 import { HeroSection } from "@/components/hero-section"
 import { DashboardPreview } from "@/components/dashboard-preview"
-import { SocialProof } from "@/components/social-proof"
-import { BentoSection } from "@/components/bento-section"
+import { FeatureBentoSection } from "@/components/feature-bento-section"
 import { ShowcaseSection } from "@/components/showcase-section"
-import { LargeTestimonial } from "@/components/large-testimonial"
 import { PricingSection } from "@/components/pricing-section"
 import { TestimonialGridSection } from "@/components/testimonial-grid-section"
 import { FAQSection } from "@/components/faq-section"
@@ -24,17 +22,11 @@ export default function LandingPage() {
             </AnimatedSection>
           </div>
         </main>
-        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto px-6 mt-[411px] md:mt-[400px]" delay={0.1}>
-          <SocialProof />
-        </AnimatedSection>
-        <AnimatedSection id="features-section" className="relative z-10 max-w-[1320px] mx-auto mt-16" delay={0.2}>
-          <BentoSection />
+        <AnimatedSection id="features-section" className="relative z-10 max-w-[1320px] mx-auto mt-[411px] md:mt-[400px]" delay={0.1}>
+          <FeatureBentoSection />
         </AnimatedSection>
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
           <ShowcaseSection />
-        </AnimatedSection>
-        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
-          <LargeTestimonial />
         </AnimatedSection>
         <AnimatedSection
           id="pricing-section"

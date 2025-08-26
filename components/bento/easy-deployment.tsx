@@ -30,8 +30,8 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
     "[16:37:25.653] Retrieving list of deployment files...",
     "[16:37:25.741] Previous build caches not available",
     "[16:37:25.979] Downloading 84 deployment files...",
-    '[16:37:29.945] Running "vercel build"',
-    "[16:37:30.561] Vercel CLI 44.5.0",
+    '[16:37:29.945] Running "deploy build"',
+    "[16:37:30.561] Deploy CLI 44.5.0",
     '[16:37:30.880] Running "install" command: `bun install`...',
     "[16:37:30.914] bun install v1.2.19 (aad3abea)",
     "[16:37:30.940] Resolving dependencies",
@@ -43,7 +43,7 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
     "[16:37:41.439] ✓ Compiled successfully",
     "[16:37:53.979] ✓ Generated static pages",
     "[16:38:00.585] ○ (Static) prerendered as static content",
-    "[16:38:01.099] Build Completed in /vercel/output [30s]",
+    "[16:38:01.099] Build Completed in /deploy/output [30s]",
     "🚀 Deployment complete – Easy!",
   ]
 
@@ -58,7 +58,7 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
         ...themeVars,
       }}
       role="img"
-      aria-label="Deployment console output with Deploy on Vercel button"
+      aria-label="Deployment console output with Deploy button"
     >
       {/* -------------------------------------------------------- */}
       {/* Console / Terminal panel                                */}
@@ -149,7 +149,7 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
             "0px 42.075px 11.475px rgba(0, 0, 0, 0), 0px 26.775px 10.2px rgba(0, 0, 0, 0.01), 0px 15.3px 8.925px rgba(0, 0, 0, 0.05), 0px 6.375px 6.375px rgba(0, 0, 0, 0.09), 0px 1.275px 3.825px rgba(0, 0, 0, 0.1)",
         }}
       >
-        🚀 Deploy on Vercel
+        🚀 Deploy
       </button>
     </div>
   )

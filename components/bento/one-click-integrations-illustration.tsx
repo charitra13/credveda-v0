@@ -71,11 +71,11 @@ const OneClickIntegrationsIllustration: React.FC<OneClickIntegrationsIllustratio
     </svg>
   )
 
-  const VercelLogo = (
+  const DockerLogo = (
     <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_254_68704)">
         <path
-          d="M36 16.7736H25.4731L34.5898 11.51L32.5877 8.0412L23.471 13.3048L28.7333 4.18878L25.2645 2.18544L20.0022 11.3016V0.775391H15.9978V11.3026L10.7333 2.18544L7.26567 4.1878L12.5291 13.3037L3.41227 8.0412L1.41005 11.509L10.5268 16.7726H0V20.7772H10.5258L1.41005 26.0408L3.41227 29.5096L12.5281 24.247L7.26455 33.363L10.7333 35.3653L15.9968 26.2483V36.7754H20.0012V26.2492L25.2637 35.3653L28.7322 33.363L23.4689 24.246L32.5856 29.5096L34.5881 26.0408L25.4721 20.7782H35.9979V16.7736H36ZM18 24.2218C14.9805 24.2218 12.5331 21.7745 12.5331 18.7549C12.5331 15.7354 14.9805 13.2879 18 13.2879C21.0195 13.2879 23.4668 15.7354 23.4668 18.7549C23.4668 21.7745 21.0195 24.2218 18 24.2218Z"
+          d="M18 8.5C20.7614 8.5 23 10.7386 23 13.5V18.5H13V13.5C13 10.7386 15.2386 8.5 18 8.5ZM18 6.5C14.134 6.5 11 9.63401 11 13.5V18.5H8C6.89543 18.5 6 19.3954 6 20.5V26.5C6 27.6046 6.89543 28.5 8 28.5H28C29.1046 28.5 30 27.6046 30 26.5V20.5C30 19.3954 29.1046 18.5 28 18.5H25V13.5C25 9.63401 21.866 6.5 18 6.5Z"
           fill="var(--oci-primary-color)"
         />
       </g>
@@ -181,7 +181,7 @@ const OneClickIntegrationsIllustration: React.FC<OneClickIntegrationsIllustratio
         item.logoSvg = FigmaLogo
         item.isGradientBg = true
       } else if (row === 1 && col === 5) {
-        item.logoSvg = VercelLogo
+        item.logoSvg = DockerLogo
         item.isGradientBg = true
       } else if (row === 2 && col === 3) {
         item.logoSvg = GitHubLogo
