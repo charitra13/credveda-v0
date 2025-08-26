@@ -119,6 +119,12 @@ export function PricingSection() {
               </div>
               <Button
                 className={`self-stretch px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact-section')
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
               >
                 <div className="px-1.5 flex justify-center items-center gap-2">
                   <span

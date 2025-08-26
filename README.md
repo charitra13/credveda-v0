@@ -10,6 +10,35 @@ CredVeda is a comprehensive data analytics and AI solutions platform designed to
 
 ## Version History
 
+### Version 2.1 - Footer Navigation Layout Update
+- **Date**: Current
+- **Changes**: 
+  - **UI UPDATE**: Changed footer navigation from vertical to horizontal layout
+  - Updated navigation links container to use flex-row instead of flex-col
+  - Improved spacing between navigation items with increased gap (gap-6)
+  - Enhanced visual alignment by centering navigation items horizontally
+  - Maintained existing hover effects and styling while improving layout efficiency
+
+### Version 2.0 - CTA Button Updates & Footer Branding
+- **Date**: Previous
+- **Changes**: 
+  - **CTA UPDATE**: Updated all CTA buttons across the website to redirect to contact section
+  - Added smooth scroll functionality to pricing section "Get Started" and "Contact Us" buttons
+  - Updated showcase section play button to redirect to contact section
+  - **FOOTER UPDATE**: Updated footer branding to match hero section byline "Stronger. Smarter. AI Integrated."
+  - Simplified footer navigation to match header navigation (Features, Showcase, Pricing, Contact)
+  - Removed extra navigation links from footer for cleaner design
+  - Maintained consistent branding across all sections
+
+### Version 1.9 - Testimonials Section Removal
+- **Date**: Previous
+- **Changes**: 
+  - **UI UPDATE**: Removed "Coding made effortless" testimonials section from website display
+  - Commented out TestimonialGridSection import in main page component
+  - Commented out testimonials section rendering in page layout
+  - Preserved all testimonial component code in codebase for future use
+  - Maintained website functionality while hiding testimonials section
+
 ### Version 1.8 - Complete Rebranding from Pointer to CredVeda
 - **Date**: Current
 - **Changes**: 

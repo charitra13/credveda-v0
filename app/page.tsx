@@ -3,7 +3,7 @@ import { DashboardPreview } from "@/components/dashboard-preview"
 import { FeatureBentoSection } from "@/components/feature-bento-section"
 import { ShowcaseSection } from "@/components/showcase-section"
 import { PricingSection } from "@/components/pricing-section"
-import { TestimonialGridSection } from "@/components/testimonial-grid-section"
+// import { TestimonialGridSection } from "@/components/testimonial-grid-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { FooterSection } from "@/components/footer-section"
@@ -35,13 +35,13 @@ export default function LandingPage() {
         >
           <PricingSection />
         </AnimatedSection>
-        <AnimatedSection
+        {/* <AnimatedSection
           id="testimonials-section"
           className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16"
           delay={0.2}
         >
           <TestimonialGridSection />
-        </AnimatedSection>
+        </AnimatedSection> */}
         <AnimatedSection id="faq-section" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
           <FAQSection />
         </AnimatedSection>

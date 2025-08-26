@@ -1,3 +1,5 @@
+"use client"
+
 import { Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -19,7 +21,16 @@ export function ShowcaseSection() {
 
         <div className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden border border-white/20 bg-gradient-to-br from-white/5 to-transparent">
           <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full p-6">
+            <Button 
+              size="lg" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full p-6"
+              onClick={() => {
+                const contactSection = document.getElementById('contact-section')
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
               <Play className="w-8 h-8 ml-1" />
             </Button>
           </div>

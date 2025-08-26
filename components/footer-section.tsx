@@ -10,7 +10,7 @@ export function FooterSection() {
         <div className="flex gap-3 items-stretch justify-center">
           <div className="text-center text-foreground text-xl font-semibold leading-4">CredVeda</div>
         </div>
-        <p className="text-foreground/90 text-sm font-medium leading-[18px] text-left">Coding made effortless</p>
+        <p className="text-foreground/90 text-sm font-medium leading-[18px] text-left">Stronger. Smarter. AI Integrated.</p>
         <div className="flex justify-start items-start gap-3">
           <a href="#" aria-label="Twitter" className="w-4 h-4 flex items-center justify-center">
             <Twitter className="w-full h-full text-muted-foreground" />
@@ -23,67 +23,22 @@ export function FooterSection() {
           </a>
         </div>
       </div>
-      {/* Right Section: Product, Company, Resources */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 p-4 md:p-8 w-full md:w-auto">
-        <div className="flex flex-col justify-start items-start gap-3">
-          <h3 className="text-muted-foreground text-sm font-medium leading-5">Product</h3>
-          <div className="flex flex-col justify-end items-start gap-2">
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Features
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Pricing
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Integrations
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Real-time Previews
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Multi-Agent Coding
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col justify-start items-start gap-3">
-          <h3 className="text-muted-foreground text-sm font-medium leading-5">Company</h3>
-          <div className="flex flex-col justify-center items-start gap-2">
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              About us
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Our team
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Careers
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Brand
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Contact
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col justify-start items-start gap-3">
-          <h3 className="text-muted-foreground text-sm font-medium leading-5">Resources</h3>
-          <div className="flex flex-col justify-center items-start gap-2">
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Terms of use
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              API Reference
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Documentation
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Community
-            </a>
-            <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Support
-            </a>
-          </div>
+      {/* Right Section: Navigation Links */}
+      <div className="flex flex-col justify-start items-start gap-3 p-4 md:p-8">
+        <h3 className="text-muted-foreground text-sm font-medium leading-5">Navigation</h3>
+        <div className="flex flex-row justify-start items-center gap-6">
+          <a href="#features-section" className="text-foreground text-sm font-normal leading-5 hover:underline">
+            Features
+          </a>
+          <a href="#showcase-section" className="text-foreground text-sm font-normal leading-5 hover:underline">
+            Showcase
+          </a>
+          <a href="#pricing-section" className="text-foreground text-sm font-normal leading-5 hover:underline">
+            Pricing
+          </a>
+          <a href="#contact-section" className="text-foreground text-sm font-normal leading-5 hover:underline">
+            Contact
+          </a>
         </div>
       </div>
     </footer>
